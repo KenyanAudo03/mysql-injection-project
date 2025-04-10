@@ -1,0 +1,39 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environment
+venv/
+.env/
+ENV/
+env/
+.venv/
+
+# VS Code settings
+.vscode/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# Python-specific
+*.pyo
+*.pyd
+*.pyc
+*.pdb
+
+# Test and coverage
+.coverage
+htmlcov/
+.tox/
+nosetests.xml
+pytest_cache/
+
+# MyPy
+.mypy_cache/
+
+# Environment variables
+*.env
