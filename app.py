@@ -21,7 +21,11 @@ def login():
         username = request.form['username']
         password = request.form['password']
         
+
+        # Safe query using parameterized query
+        # query = ("SELECT * FROM user WHERE USERNAME = %s AND PASSWORD = %s", (username, password))
         
+        # Unsafe query
         query = "SELECT * FROM user WHERE username = '" + username + "' AND password = '" + password + "'"
         
         try:
@@ -29,7 +33,7 @@ def login():
             user = cursor.fetchone()
             
             if user:
-                session['username'] = username
+                session['username'] = user["USERNAME"]
                 return redirect('/welcome')
             else:
                 flash("Invalid Login Credentials")
